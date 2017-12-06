@@ -6,7 +6,7 @@ buildscript {
             dirs 'libs'
         }
 
-        maven{
+        maven {
             url uri("./plugins")
         }
 
@@ -30,7 +30,7 @@ allprojects {
             dirs 'libs'
         }
 
-        maven{
+        maven {
             url uri("./plugins")
         }
 
@@ -64,6 +64,7 @@ ext.versions = [
         'espresso'                 : '2.2.2',
         'astl'                     : '0.5',
         'errorProne'               : '2.1.1',
+        'stetho'                   : '1.5.0',
 ]
 
 ext.deps = [
@@ -98,6 +99,15 @@ ext.deps = [
                 'runtime' : "com.jakewharton:butterknife:${versions.butterKnife}",
                 'compiler': "com.jakewharton:butterknife-compiler:${versions.butterKnife}",
         ],
+        //stetho调试工具
+//        api 'com.facebook.stetho:stetho:1.5.0'
+//        api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+        'stetho'                 : [
+                'stetho'        : "com.facebook.stetho:stetho:${versions.stetho}",
+                'okhttp3': "com.facebook.stetho:stetho-okhttp3:${versions.stetho}",
+                'js'     : "com.facebook.stetho:stetho-js-rhino:${versions.stetho}"
+        ],
+
         'timber'                 : 'com.jakewharton.timber:timber:4.5.1',
         'byteUnits'              : 'com.jakewharton.byteunits:byteunits:0.9.1',
         'rxbinding'              : 'com.jakewharton.rxbinding:rxbinding:1.0.1',

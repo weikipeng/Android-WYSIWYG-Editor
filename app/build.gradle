@@ -44,6 +44,10 @@ dependencies {
     api deps.support.constraint
     api deps.support.cardview
 
+    api deps.stetho.stetho
+    api deps.stetho.okhttp3
+    api deps.stetho.js
+
 
     compile project(':laser-native-editor')
 //  compile 'com.github.irshulx:laser-native-editor:2.0.0'
